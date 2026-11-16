@@ -6,42 +6,31 @@ Proyecto de grado de la Escuela de Ingeniería Industrial de la Universidad Cat�
 
 ## Cómo usarlo
 
-- **En la web:** abrir la página publicada con GitHub Pages y elegir una versión.
+- **En la web:** abrir la página publicada con GitHub Pages y elegir una de las versiones disponibles.
 - **Sin conexión:** descargar cualquier archivo de `versiones/` y abrirlo con doble clic en un navegador moderno (Chrome, Edge, Firefox o Safari). No requiere instalación.
 
 ## Contenido del repositorio
 
 | Carpeta o archivo | Contenido |
 |---|---|
-| `index.html` | Página de inicio con el acceso a las siete versiones. |
-| `versiones/` | Las siete entregas semanales del simulador (un archivo HTML autocontenido cada una). |
-| `pruebas/` | Pruebas unitarias del motor generador y del módulo de pronóstico (`npm test`). |
-| `validacion/` | Hoja de cálculo de contraste del motor y scripts de la prueba de bondad de ajuste de Kolmogórov-Smirnov. |
+| `index.html` | Página de inicio con el acceso a las versiones publicadas. |
+| `versiones/` | Las entregas semanales publicadas hasta la semana 1 (un archivo HTML autocontenido cada una). |
 
 ## Versiones
 
-| Semana | Archivo | Módulo incorporado |
-|---|---|---|
-| 1 | `farmito-v1-contabilidad.html` | Menú, ronda semanal y Contabilidad |
-| 2 | `farmito-v2-compras.html` | Compras y sistema de soporte de decisiones |
-| 3 | `farmito-v3-inventario.html` | Inventario, lotes y cadena de frío |
-| 4 | `farmito-v4-despacho.html` | Despacho y demanda de las farmacias |
-| 5 | `farmito-v5-personal.html` | Personal y capacidad operativa |
-| 6 | `farmito-v6-cumplimiento.html` | Cumplimiento y marco legal |
-| 7 | `farmito-v7-completo.html` | Indicadores e integración de los siete módulos |
+| Semana | Archivo | Módulo incorporado | Estado |
+|---|---|---|---|
+| 1 | `farmito-v1-contabilidad.html` | Menú, ronda semanal y Contabilidad | Disponible |
+| 2 | — | Compras y sistema de soporte de decisiones | En construcción (disponible el 20 de noviembre) |
+| 3 | — | Inventario, lotes y cadena de frío | En construcción (disponible el 24 de noviembre) |
+| 4 | — | Despacho y demanda de las farmacias | En construcción (disponible el 27 de noviembre) |
+| 5 | — | Personal y capacidad operativa | En construcción (disponible el 1 de diciembre) |
+| 6 | — | Cumplimiento y marco legal | En construcción (disponible el 5 de diciembre) |
+| 7 | — | Indicadores e integración de los siete módulos | En construcción (disponible el 9 de diciembre) |
 
 ## Arquitectura
 
 Aplicación web en HTML, CSS y JavaScript, sin servidor. Cada archivo está organizado por secciones (§1 a §14) que separan los datos del modelo (cartera, proveedores, farmacias y parámetros), el motor generador estocástico, el módulo de pronóstico, la lógica de la ronda semanal de cinco fases y la interfaz. La constante `ETAPA` de la sección §4-B indica qué módulos están construidos en cada entrega.
-
-## Pruebas
-
-```bash
-npm test                                   # 16 pruebas unitarias del motor y del pronóstico (Node.js 18 o superior)
-node validacion/muestras.js > validacion/muestras.json
-node validacion/replicas.js > validacion/replicas.json
-python3 validacion/bondad_ajuste.py        # prueba de Kolmogórov-Smirnov (requiere SciPy)
-```
 
 ## Publicación con GitHub Pages
 

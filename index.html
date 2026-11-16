@@ -6,16 +6,33 @@
 <title>Farmito · Simulador de compras e inventario de una droguería</title>
 <style>
   body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#E4EFF8;color:#14213D}
-  main{max-width:860px;margin:0 auto;padding:40px 20px 60px}
+  main{max-width:880px;margin:0 auto;padding:40px 20px 60px}
   h1{font-size:34px;margin:0 0 6px;color:#14213D}
   p.sub{margin:0 0 28px;font-size:17px;color:#2A5BA8}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-  a.v{display:block;background:#fff;border:3px solid #14213D;border-radius:14px;padding:16px 18px;text-decoration:none;color:#14213D;box-shadow:0 4px 0 #14213D}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px 16px}
+  .v{position:relative;display:block;min-height:66px;background:#fff;border:3px solid #14213D;border-radius:14px;
+     padding:16px 18px;text-decoration:none;color:#14213D;box-shadow:0 4px 0 #14213D}
   a.v:hover{background:#FFF6DA}
-  a.v b{display:block;font-size:13px;color:#C9302A;letter-spacing:.04em;margin-bottom:4px}
-  a.v span{font-size:16px}
-  a.v.final{border-color:#C9302A;box-shadow:0 4px 0 #C9302A}
-  footer{margin-top:36px;font-size:13px;color:#3F5068;line-height:1.6}
+  .v b{display:block;font-size:13px;color:#C9302A;letter-spacing:.04em;margin-bottom:4px}
+  .v span{font-size:16px}
+  a.v.actual{border-color:#C9302A;box-shadow:0 4px 0 #C9302A}
+  /* tarjetas en construcción */
+  .v.obra{background:#45546F;cursor:not-allowed;overflow:visible}
+  .v.obra b,.v.obra span.t{opacity:.35;color:#0E1830}
+  .v.obra .recorte{position:absolute;inset:-3px;border-radius:14px;overflow:hidden;pointer-events:none}
+  .cinta{position:absolute;left:-12%;width:124%;top:38%;transform:rotate(-13deg);height:30px;
+         background:repeating-linear-gradient(-45deg,#111 0 11px,#F7C600 11px 22px);
+         box-shadow:0 3px 6px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+  .cinta i{font-style:normal;background:#F7C600;color:#111;font-weight:900;font-size:15px;letter-spacing:.06em;
+           padding:6px 26px;height:18px;line-height:18px}
+  .ico{position:absolute;font-size:30px;z-index:2;filter:drop-shadow(0 2px 2px rgba(0,0,0,.4))}
+  .ico.izq{left:10px;bottom:22px}
+  .ico.der{right:12px;bottom:22px}
+  .placa{position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);z-index:3;white-space:nowrap;
+         background:linear-gradient(#625A52,#433D37);border:2px solid #2B2622;border-radius:8px;
+         padding:5px 16px;font-weight:900;font-size:16px;color:#FFC83A;
+         text-shadow:0 1px 0 #6B3E00,0 0 2px #000;box-shadow:0 3px 0 #2B2622}
+  footer{margin-top:44px;font-size:13px;color:#3F5068;line-height:1.6}
 </style>
 </head>
 <body>
@@ -23,13 +40,13 @@
   <h1>Farmito</h1>
   <p class="sub">Simulador educativo de compras e inventario de una droguería, con sistema de soporte de decisiones.</p>
   <div class="grid">
-    <a class="v" href="versiones/farmito-v1-contabilidad.html"><b>SEMANA 1</b><span>Menú, ronda semanal y Contabilidad</span></a>
-    <a class="v" href="versiones/farmito-v2-compras.html"><b>SEMANA 2</b><span>Compras y sistema de soporte de decisiones</span></a>
-    <a class="v" href="versiones/farmito-v3-inventario.html"><b>SEMANA 3</b><span>Inventario, lotes y cadena de frío</span></a>
-    <a class="v" href="versiones/farmito-v4-despacho.html"><b>SEMANA 4</b><span>Despacho y demanda de las farmacias</span></a>
-    <a class="v" href="versiones/farmito-v5-personal.html"><b>SEMANA 5</b><span>Personal y capacidad operativa</span></a>
-    <a class="v" href="versiones/farmito-v6-cumplimiento.html"><b>SEMANA 6</b><span>Cumplimiento y marco legal</span></a>
-    <a class="v final" href="versiones/farmito-v7-completo.html"><b>SEMANA 7 · VERSIÓN ACTUAL</b><span>Indicadores e integración de los siete módulos</span></a>
+    <a class="v actual" href="versiones/farmito-v1-contabilidad.html"><b>SEMANA 1 · VERSIÓN ACTUAL</b><span>Menú, ronda semanal y Contabilidad</span></a>
+    <div class="v obra" aria-disabled="true" title="En construcción · disponible el 20 de noviembre"><b>SEMANA 2</b><span class="t">Compras y sistema de soporte de decisiones</span><div class="recorte"><div class="cinta"><i>EN CONSTRUCCIÓN</i></div></div><span class="ico izq">🚧</span><span class="ico der">🔨</span><span class="placa">Disponible el 20 de noviembre</span></div>
+    <div class="v obra" aria-disabled="true" title="En construcción · disponible el 24 de noviembre"><b>SEMANA 3</b><span class="t">Inventario, lotes y cadena de frío</span><div class="recorte"><div class="cinta"><i>EN CONSTRUCCIÓN</i></div></div><span class="ico izq">🚧</span><span class="ico der">🔒</span><span class="placa">Disponible el 24 de noviembre</span></div>
+    <div class="v obra" aria-disabled="true" title="En construcción · disponible el 27 de noviembre"><b>SEMANA 4</b><span class="t">Despacho y demanda de las farmacias</span><div class="recorte"><div class="cinta"><i>EN CONSTRUCCIÓN</i></div></div><span class="ico izq">🚧</span><span class="ico der">🔒</span><span class="placa">Disponible el 27 de noviembre</span></div>
+    <div class="v obra" aria-disabled="true" title="En construcción · disponible el 1 de diciembre"><b>SEMANA 5</b><span class="t">Personal y capacidad operativa</span><div class="recorte"><div class="cinta"><i>EN CONSTRUCCIÓN</i></div></div><span class="ico izq">🚧</span><span class="ico der">🏗️</span><span class="placa">Disponible el 1 de diciembre</span></div>
+    <div class="v obra" aria-disabled="true" title="En construcción · disponible el 5 de diciembre"><b>SEMANA 6</b><span class="t">Cumplimiento y marco legal</span><div class="recorte"><div class="cinta"><i>EN CONSTRUCCIÓN</i></div></div><span class="ico izq">🚧</span><span class="ico der">🔒</span><span class="placa">Disponible el 5 de diciembre</span></div>
+    <div class="v obra" aria-disabled="true" title="En construcción · disponible el 9 de diciembre"><b>SEMANA 7</b><span class="t">Indicadores e integración de los siete módulos</span><div class="recorte"><div class="cinta"><i>EN CONSTRUCCIÓN</i></div></div><span class="ico izq">🚧</span><span class="ico der">🔒</span><span class="placa">Disponible el 9 de diciembre</span></div>
   </div>
   <footer>
     Proyecto de grado · Escuela de Ingeniería Industrial, Universidad Católica Andrés Bello · Equipo N.° 21: Camila Barrera y Jean Paul Szczedrin.<br>
