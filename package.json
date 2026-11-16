@@ -1,0 +1,9 @@
+{
+  "name": "farmito",
+  "version": "7.0.0",
+  "description": "Simulador educativo de compras e inventario de una droguería, con sistema de soporte de decisiones (proyecto de grado, UCAB).",
+  "private": true,
+  "scripts": {
+    "test": "node --test pruebas/motor.test.js"
+  }
+}

@@ -1,0 +1,11 @@
+﻿variable;medicamento;distribucion;n;D;p_valor;resultado (alfa = 0,05)
+Tiempo de entrega;DIC;Triangular(3, 5, 8);1000;0.0297;0.3352;No se rechaza
+Tiempo de entrega;ACE;Triangular(4, 7, 12);1000;0.0212;0.7506;No se rechaza
+Tiempo de entrega;CPB;Triangular(5, 7, 10);1000;0.0354;0.1581;No se rechaza
+Tiempo de entrega;LOR;Triangular(7, 10, 15);1000;0.0450;0.0338;Se rechaza
+Tiempo de entrega;INS;Triangular(30, 45, 90);1000;0.0155;0.9666;No se rechaza
+Demanda semanal;DIC;Normal(1000, 100);1000;0.0236;0.6270;No se rechaza
+Demanda semanal;ACE;Normal(800, 200);1000;0.0269;0.4587;No se rechaza
+Demanda semanal;CPB;Normal(400, 140);1000;0.0404;0.0741;No se rechaza
+Demanda semanal;LOR;Normal(500, 90);1000;0.0406;0.0719;No se rechaza
+Demanda semanal;INS;Normal(100, 15);1000;0.0243;0.5856;No se rechaza

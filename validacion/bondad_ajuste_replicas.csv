@@ -1,0 +1,11 @@
+﻿variable;medicamento;replicas;tasa_de_rechazo;p_uniformidad_de_p_valores
+Tiempo de entrega;DIC;200;0.040;0.0469
+Tiempo de entrega;ACE;200;0.025;0.0996
+Tiempo de entrega;CPB;200;0.060;0.6448
+Tiempo de entrega;LOR;200;0.060;0.5680
+Tiempo de entrega;INS;200;0.055;0.4864
+Demanda semanal;DIC;200;0.045;0.6990
+Demanda semanal;ACE;200;0.030;0.4015
+Demanda semanal;CPB;200;0.025;0.4360
+Demanda semanal;LOR;200;0.050;0.5800
+Demanda semanal;INS;200;0.025;0.3557
