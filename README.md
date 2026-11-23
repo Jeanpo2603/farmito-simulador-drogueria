@@ -14,14 +14,14 @@ Proyecto de grado de la Escuela de Ingeniería Industrial de la Universidad Cat�
 | Carpeta o archivo | Contenido |
 |---|---|
 | `index.html` | Página de inicio con el acceso a las versiones publicadas. |
-| `versiones/` | Las entregas semanales publicadas hasta la semana 1 (un archivo HTML autocontenido cada una). |
+| `versiones/` | Las entregas semanales publicadas hasta la semana 2 (un archivo HTML autocontenido cada una). |
 
 ## Versiones
 
 | Semana | Archivo | Módulo incorporado | Estado |
 |---|---|---|---|
 | 1 | `farmito-v1-contabilidad.html` | Menú, ronda semanal y Contabilidad | Disponible |
-| 2 | — | Compras y sistema de soporte de decisiones | En construcción (disponible el 20 de noviembre) |
+| 2 | `farmito-v2-compras.html` | Compras y sistema de soporte de decisiones | Disponible |
 | 3 | — | Inventario, lotes y cadena de frío | En construcción (disponible el 24 de noviembre) |
 | 4 | — | Despacho y demanda de las farmacias | En construcción (disponible el 27 de noviembre) |
 | 5 | — | Personal y capacidad operativa | En construcción (disponible el 1 de diciembre) |
